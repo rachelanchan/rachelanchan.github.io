@@ -10,36 +10,42 @@
 </head>
 
 <body>
-  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <div class="navbar-item is-hidden-desktop">
-        <a href="https://github.com/rachelanchan" class="icon is-large has-text-light">
-          <i class="fab fa-2x fa-github"></i>
-        </a>
-      </div>
-      <div class="navbar-item is-hidden-desktop">
-        <a href="https://fullstackmark.com" class="icon is-large has-text-light">
-          <i class="fas fa-2x fa-globe"></i>
-        </a>
-      </div>
-    </div>
-    <div class="navbar-menu">
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <a href="https://github.com/rachelanchan" class="icon is-large has-text-light">
-            <i class="fab fa-2x fa-github"></i>
-          </a>
-        </div>
-        <div class="navbar-item">
-          <a href="https://fullstackmark.com" class="icon is-large has-text-light">
-            <i class="fas fa-2x fa-globe"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="#">
+      <strong>Rachel Anchan</strong>
+    </a>
 
-  <section class="hero is-primary">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasic" class="navbar-menu">
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <a href="https://github.com/rachelanchan" target="_blank" class="icon is-large has-text-light">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+      </div>
+      <div class="navbar-item">
+        <a href="https://linkedin.com/in/rachel-anchan" target="_blank" class="icon is-large has-text-light">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+      </div>
+      <div class="navbar-item">
+        <a href="mailto:rachelanchan11@gmail.com" class="icon is-large has-text-light">
+          <i class="fas fa-envelope fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+  <section class="hero is-primary"> 
     <div class="hero-body">
       <div class="container">
         <div class="level">
@@ -277,10 +283,10 @@
       <nav class="level">
         <div class="level-item has-text-centered">
           <div>
-            <a href="https://github.com/rachelanchan" class="icon is-large">
+            <a href="https://github.com/rachelanchan" target="_blank" class="icon is-large">
               <i class="fab fa-2x fa-github"></i>
             </a>
-            <p class="heading"><a href="https://github.com/rachelanchan">github.com/rachelanchan</a></p>
+            <p class="heading"><a href="https://github.com/rachelanchan" target="_blank" >github.com/rachelanchan</a></p>
           </div>
         </div>
 
@@ -294,10 +300,10 @@
         </div>
         <div class="level-item has-text-centered">
           <div>
-            <a href="https://www.linkedin.com/in/rachel-anchan" class="icon is-large">
+            <a href="https://www.linkedin.com/in/rachel-anchan" target="_blank" class="icon is-large">
               <i class="fab fa-2x fa-linkedin-in"></i>
             </a>
-            <p class="heading"><a href="https://www.linkedin.com/in/rachel-anchan">linkedin</a></p>
+            <p class="heading"><a href="https://www.linkedin.com/in/rachel-anchan" target="_blank">linkedin</a></p>
           </div>
         </div>
       </nav>
@@ -632,14 +638,38 @@
     </div>
   </div>
 
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <p>
-        <a href="https://github.com/rachelanchan" target="_blank" class="icon has-text-primary">
-          <i class="fab fa-github"></i> <strong>Github</strong></a>
-      </p>
-    </div>
-  </footer>
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+     <!-- <a href="https://github.com/rachelanchan" target="_blank" class="icon has-text-primary">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:rachelanchan11@gmail.com" target="_blank" class="icon has-text-primary">
+        <i class="fas fa-envelope"></i>
+      </a>
+            <a href="https://linkedin.com/rachel-anchan" target="_blank" class="icon has-text-primary">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </p> -->
+    <p>&copy; <span id="current-year"></span> Rachel Anchan. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.navbar-burger');
+    const menu = document.getElementById(burger.dataset.target);
+
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('is-active');
+      menu.classList.toggle('is-active');
+    });
+  });
+</script>
 
   <script src="js/bundle.js"></script>
 </body>
