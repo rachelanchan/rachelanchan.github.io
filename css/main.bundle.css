@@ -2,6 +2,28 @@
 /*! Flickity v2.3.0
 https://flickity.metafizzy.co
 ---------------------------------------------- */
+
+@media screen and (max-width: 1023px) {
+  .navbar-menu.is-active {
+    background-color: #333;
+  }
+}
+
+.contact-icon,
+.contact-icon i,
+.contact-link {
+  color: #333 !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-icon:hover,
+.contact-icon i:hover,
+.contact-link:hover {
+  color: #555 !important;
+}
+
+
 .flickity-enabled {
   position: relative;
 }
