@@ -138,8 +138,7 @@ html {
     transition: background 0.3s ease;
   }
 
-
-/* Ensure there is padding-top for the hero and other sections */
+  /* Ensure there is padding-top for the hero and other sections */
   .hero.is-primary {
     padding-top: 7rem; /* Adjust space below navbar */
   }
@@ -156,21 +155,92 @@ html {
   font-weight: 700;
 }
 
-
 .project-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);  /* Slight lift effect */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);  /* Stronger shadow on hover */
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
 }
 
 .card-content .title {
   font-weight: bold;
 }
 
+/* Ensure only the project section is affected */
+#projects .columns.is-multiline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
 
+/* Each column will take about 32% of the width */
+#projects .column.is-12-mobile.is-4-tablet.is-4-desktop {
+  flex: 1 1 32%; /* Flexbox to ensure consistent sizing */
+  min-width: 250px; /* Prevent columns from shrinking too small */
+  margin-bottom: 1rem;
+}
+
+/* Card styles for each project */
+#projects .project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image container */
+#projects .card-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background: #f8f8f8; /* Light grey background for the device "screen" */
+  border-radius: 20px; /* Rounded corners for device */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Shadow for device effect */
+  overflow: hidden;
+  padding: 0; /* Remove padding to avoid extra space */
+}
+
+/* Adding a border around the image to look like the screen of a device */
+#projects .card-image figure.image {
+  margin: 0; /* Remove default figure margin */
+  width: 100%;
+  height: 100%;
+  border-radius: 15px; /* Rounded corners for the image */
+  background: #fff; /* White background for contrast */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow around the image */
+  overflow: hidden;
+}
+
+/* Make the image fit properly inside the container */
+#projects .card-image img {
+  object-fit: cover; /* Maintain the image aspect ratio */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  border-radius: 15px; /* Rounded corners for the image */
+}
+
+/* Title handling in cards */
+#projects .card-content .title {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 1rem;
+  line-height: 1.5;
+  word-wrap: break-word; /* Allow text to wrap */
+  white-space: normal; /* Allow normal text wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}
+
+/* Ensure that icons, links, and text inside the card adjust properly */
 .contact-icon,
 .contact-icon i,
 .contact-link {
@@ -179,19 +249,61 @@ html {
   transition: color 0.3s ease;
 }
 
+/* Hover effect for better interaction */
 .contact-icon:hover,
 .contact-icon i:hover,
 .contact-link:hover {
   color: #555 !important;
 }
 
-  /* Override text and svg color inside .tag.is-light */
-  .tag.is-light {
-    color: #000 !important; /* black text */
-  }
-  .tag.is-light svg {
-    fill: #000 !important; /* black svg fill */
-  }
+/* Ensure equal height for the contact cards */
+.columns.is-variable.is-6.is-multiline.has-text-centered .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Force the box (contact card) to stretch to full height */
+.contact-icon + p {
+  flex-grow: 1; /* Ensure p tag grows to fill space */
+}
+
+/* Ensure all boxes have the same height */
+.contact-icon,
+.contact-link {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* Box should stretch to fill the available height */
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensure full height */
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Add padding between the content (icon and link/text) */
+.box a {
+  margin-bottom: 0.8rem;
+}
+
+/* Ensure that the icon and text have appropriate spacing */
+.contact-icon i {
+  margin-bottom: 1rem;
+}
+
+/* Override text and svg color inside .tag.is-light */
+.tag.is-light {
+  color: #000 !important; /* black text */
+}
+.tag.is-light svg {
+  fill: #000 !important; /* black svg fill */
+}
 
 .flickity-enabled {
   position: relative;
@@ -828,6 +940,7 @@ a.box:active {
   padding: calc(0.5em - 1px) 1em;
   text-align: center;
   white-space: nowrap;
+  margin: 0 auto;
 }
 .button strong {
   color: inherit;
