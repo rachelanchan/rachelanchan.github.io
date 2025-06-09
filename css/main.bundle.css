@@ -152,9 +152,24 @@ html {
 
 .nav-link.is-active {
   background-color: rgba(0, 0, 0, 0.1); /* Highlight active link */
-  border-radius: 5px;
+  border-radius: 15px;
   font-weight: 700;
 }
+
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);  /* Slight lift effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);  /* Stronger shadow on hover */
+}
+
+.card-content .title {
+  font-weight: bold;
+}
+
 
 .contact-icon,
 .contact-icon i,
