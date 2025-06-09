@@ -3,11 +3,141 @@
 https://flickity.metafizzy.co
 ---------------------------------------------- */
 
-@media screen and (max-width: 1023px) {
-  .navbar-menu.is-active {
-    background-color: #333;
+
+
+  html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  padding-top: 5rem;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* this makes it match the .hero section */
+  z-index: -1; /* stays behind content */
+  pointer-events: auto;
+}
+
+.hero-body {
+  position: relative;
+  z-index: 1; /* content above particles */
+}
+
+.night-navbar-floating {
+  position: fixed;
+  top: 1.15rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    180deg,
+    rgba(234, 235, 241, 0.9) 0%,
+    rgba(247, 247, 252, 0.8) 70%,
+    rgba(213, 213, 215, 0.95) 100%
+  );
+  box-shadow: 0 4px 15px rgba(10, 11, 58, 0.6);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-radius: 12px;
+  z-index: 1000;
+  width: auto;
+  max-width: 900px;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #000000; /* Black text color */
+  font-weight: 800;
+  font-size: 0.75rem;
+  user-select: none;
+}
+
+/* Ensure icons and text inside the navbar inherit color */
+.night-navbar-floating a {
+  color: inherit;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  color: #000000; /* Black color for navbar brand */
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar-icons {
+  display: flex;
+  gap: 2.5rem;
+}
+
+/* Add more specificity to target icons properly */
+.navbar-icons .icon {
+  color: #000000 !important; /* Ensure icon starts as black */
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  html {
+    scroll-padding-top: 6rem;
+  }
+  .night-navbar-floating {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0;
+    box-shadow: none;
+    background: linear-gradient(180deg, rgba(234, 235, 241, 0.9), rgba(247, 247, 252, 0.8), rgba(213, 213, 215, 0.95));
+    z-index: 1000;
+  }
+
+  .navbar-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .navbar-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .navbar-icons a {
+    flex: 0 1 20%; /* Fits ~3 items per row */
+    text-align: center;
+    color: #000;
+    padding: 0.6rem 0.4rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+
+  .navbar-icons a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
   }
 }
+
 
 .contact-icon,
 .contact-icon i,
@@ -22,7 +152,6 @@ https://flickity.metafizzy.co
 .contact-link:hover {
   color: #555 !important;
 }
-
 
 .flickity-enabled {
   position: relative;
@@ -78,7 +207,7 @@ https://flickity.metafizzy.co
   opacity: 0.3;
   pointer-events: none;
 }
-  
+
 .flickity-button-icon {
   fill: currentColor;
 }
@@ -9411,8 +9540,8 @@ a.has-text-danger-dark:hover {
   }
 }
 .hero.is-primary {
-  background-color: #454545;
-  color: #fff;
+  background-color: #0a0b3a !important;
+  color: #ffffff; /* Optional: to maintain readable text */
 }
 .hero.is-primary
   a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
