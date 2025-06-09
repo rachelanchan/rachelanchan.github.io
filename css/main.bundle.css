@@ -3,12 +3,11 @@
 https://flickity.metafizzy.co
 ---------------------------------------------- */
 
-
-
-  html {
+html {
   scroll-behavior: smooth;
   scroll-padding-top: 3rem;
 }
+
 .hero {
   position: relative;
   overflow: hidden;
@@ -87,9 +86,10 @@ https://flickity.metafizzy.co
   transition: color 0.3s ease;
 }
 
+/*mobile */
 @media (max-width: 600px) {
   html {
-    scroll-padding-top: 6rem;
+    scroll-padding-top: 7rem;
   }
   .night-navbar-floating {
     position: fixed;
@@ -102,7 +102,12 @@ https://flickity.metafizzy.co
     padding: 0.5rem 0.5rem;
     border-radius: 0;
     box-shadow: none;
-    background: linear-gradient(180deg, rgba(234, 235, 241, 0.9), rgba(247, 247, 252, 0.8), rgba(213, 213, 215, 0.95));
+    background: linear-gradient(
+      180deg,
+      rgba(234, 235, 241, 0.9),
+      rgba(247, 247, 252, 0.8),
+      rgba(213, 213, 215, 0.95)
+    );
     z-index: 1000;
   }
 
@@ -133,11 +138,23 @@ https://flickity.metafizzy.co
     transition: background 0.3s ease;
   }
 
-  .navbar-icons a:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+
+/* Ensure there is padding-top for the hero and other sections */
+  .hero.is-primary {
+    padding-top: 7rem; /* Adjust space below navbar */
+  }
+
+  /* Add padding-top to the section containers to prevent overlap */
+  section {
+    padding-top: 7rem; /* Ensure all sections have space from the fixed navbar */
   }
 }
 
+.nav-link.is-active {
+  background-color: rgba(0, 0, 0, 0.1); /* Highlight active link */
+  border-radius: 5px;
+  font-weight: 700;
+}
 
 .contact-icon,
 .contact-icon i,
@@ -152,6 +169,14 @@ https://flickity.metafizzy.co
 .contact-link:hover {
   color: #555 !important;
 }
+
+  /* Override text and svg color inside .tag.is-light */
+  .tag.is-light {
+    color: #000 !important; /* black text */
+  }
+  .tag.is-light svg {
+    fill: #000 !important; /* black svg fill */
+  }
 
 .flickity-enabled {
   position: relative;
