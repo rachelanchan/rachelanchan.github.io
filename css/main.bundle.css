@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 /*! Flickity v2.3.0
 https://flickity.metafizzy.co
 ---------------------------------------------- */
@@ -7,6 +8,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 3rem;
 }
+
 
 .hero {
   position: relative;
@@ -155,11 +157,10 @@ html {
   font-weight: 700;
 }
 
-.project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
+.box:hover,
+.card:hover,
 .project-card:hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   transform: translateY(-5px); /* Slight lift effect */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
 }
@@ -295,6 +296,33 @@ html {
 /* Ensure that the icon and text have appropriate spacing */
 .contact-icon i {
   margin-bottom: 1rem;
+}
+
+/* Work ex */
+.vertical-divider {
+  background-color: #e5e7eb; /* Tailwind's bg-gray-200 */
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  height: 4rem;
+  width: 0.25rem;
+  border-radius: 9999px; /* Fully rounded (pill shape) */
+  opacity: 1;
+  transform: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+
+  /* Optional: dark mode handling */
+  @media (prefers-color-scheme: dark) {
+    .vertical-divider {
+      background-color: rgba(229, 231, 235, 0.2); /* 20% opacity in dark mode */
+    }
+  }
+}
+@media (min-width: 640px) {
+  .vertical-divider {
+    display: block; /* Visible on screens 640px and wider */
+  }
 }
 
 /* Override text and svg color inside .tag.is-light */
@@ -817,7 +845,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: Lato, sans-serif;
+  font-family: Nunito, sans-serif;
 }
 code,
 pre {
@@ -5003,7 +5031,7 @@ button.dropdown-item.is-active {
 }
 @media screen and (max-width: 768px) {
   .media-content {
-    overflow-x: auto;
+    overflow-x:none;
   }
 }
 .menu {
@@ -9189,7 +9217,7 @@ a.has-text-danger-dark:hover {
 .is-family-primary,
 .is-family-sans-serif,
 .is-family-secondary {
-  font-family: Lato, sans-serif !important;
+  font-family: Nunito, sans-serif !important;
 }
 .is-family-code,
 .is-family-monospace {
