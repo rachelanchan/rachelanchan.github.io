@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         value: isMobile ? 45 : 120, // Fewer particles on mobile
         density: {
           enable: true,
-          value_area: isMobile ? 650 : 800, // Slightly smaller area for mobile
+          value_area: isMobile ? 650 : 850, // Slightly smaller area for mobile
         },
       },
       color: {
