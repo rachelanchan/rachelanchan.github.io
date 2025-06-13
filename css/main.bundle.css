@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 /*! Flickity v2.3.0
 https://flickity.metafizzy.co
 ---------------------------------------------- */
@@ -8,7 +7,6 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 3rem;
 }
-
 
 .hero {
   position: relative;
@@ -45,7 +43,7 @@ html {
   );
   box-shadow: 0 4px 15px rgba(10, 11, 58, 0.6);
   backdrop-filter: saturate(180%) blur(10px);
-  border-radius: 12px;
+  border-radius: 25px;
   z-index: 1000;
   width: auto;
   max-width: 900px;
@@ -53,7 +51,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #000000; /* Black text color */
+  color: #151515; /* navbar text color */
   font-weight: 800;
   font-size: 0.75rem;
   user-select: none;
@@ -332,7 +330,6 @@ html {
 .tag.is-light svg {
   fill: #000 !important; /* black svg fill */
 }
-
 
 .flickity-enabled {
   position: relative;
@@ -5031,7 +5028,7 @@ button.dropdown-item.is-active {
 }
 @media screen and (max-width: 768px) {
   .media-content {
-    overflow-x:none;
+    overflow-x: none;
   }
 }
 .menu {

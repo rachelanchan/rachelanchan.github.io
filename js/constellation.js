@@ -1,11 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+  // Check if screen width is 768px or less (common mobile breakpoint)
+  const isMobile = window.innerWidth <= 768;
   particlesJS("particles-js", {
     particles: {
       number: {
-        value: 80,
+        value: isMobile ? 45 : 120, // Fewer particles on mobile
         density: {
           enable: true,
-          value_area: 800,
+          value_area: isMobile ? 650 : 800, // Slightly smaller area for mobile
         },
       },
       color: {
@@ -27,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       },
       opacity: {
-        value: 0.3,
+        value: 0.4,
       },
       size: {
         value: 2,
@@ -37,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         enable: true,
         distance: 150,
         color: "#ffffff",
-        opacity: 0.6,
+        opacity: 0.4,
         width: 1,
       },
       move: {
@@ -46,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         direction: "none",
         random: false,
         straight: false,
-        out_mode: "out",
+        out_mode: "bounce",
         bounce: false,
         attract: {
               enable: false,
@@ -63,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
           mode: "grab",
         },
         onclick: {
-          enable: true,
+          enable: false,
           mode: "grab",
         },
         resize: true,
