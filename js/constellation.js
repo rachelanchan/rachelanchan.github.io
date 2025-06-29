@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       move: {
         enable: true,
-        speed: 5,
+        speed: 7,
         direction: "none",
         random: false,
         straight: false,
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       modes: {
         grab: {
-          distance: 160,
+          distance: 150,
           line_linked: {
             opacity: 1,
           },

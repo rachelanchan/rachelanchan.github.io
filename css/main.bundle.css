@@ -15,6 +15,18 @@ html {
   padding-top: 5rem;
 }
 
+.custom-link {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+  }
+
+  .custom-link:hover {
+    color: #3273dc; /* Bulma's primary blue */
+    text-decoration: underline;
+  }
+
 #particles-js {
   position: absolute;
   top: 0;
@@ -1036,10 +1048,25 @@ input[type="radio"] {
 small {
   font-size: 0.875em;
 }
-span {
-  font-style: inherit;
-  font-weight: inherit;
+
+.tags span.tag {
+  font-size: 0.9rem !important;
+  padding: 0.35rem 0.75rem;
+  margin: 0.2rem;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  color: #333;
+  display: inline-block;
+  transition: all 0.25s ease;
+  cursor: default;
 }
+
+.tags span.tag:hover {
+  background-color: #0a0b3a;
+  color: #fff;
+  transform: scale(1.05);
+}
+
 strong {
   color: #363636;
   font-weight: 700;
