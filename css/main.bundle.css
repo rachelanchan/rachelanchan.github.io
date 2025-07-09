@@ -187,6 +187,11 @@ html {
   }
 }
 
+.has-background-light-grey {
+  background-color: #f0f0f0; /* Light, clean grey */
+}
+
+
 .hero-body {
   position: relative;
   z-index: 1; /* content above particles */
@@ -451,9 +456,9 @@ html {
 
 .vertical-divider {
   background-color: #e5e7eb; /* Tailwind's bg-gray-200 */
-  margin-top: 2.5rem;
+  margin-top: 4.5rem;
   margin-bottom: 2.5rem;
-  height: 4rem;
+  height: 6rem;
   width: 0.25rem;
   border-radius: 9999px; /* Fully rounded (pill shape) */
   opacity: 1;
