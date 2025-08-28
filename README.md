@@ -8,5 +8,6 @@ This website showcases:
 
 [LinkedIn](https://www.linkedin.com/in/rachel-anchan/)
 [GitHub](https://github.com/rachelanchan)
+[Website](https://rachelanchan.github.io/)
 
 Thanks for visiting! ✨

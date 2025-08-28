@@ -188,7 +188,7 @@ html {
 }
 
 .has-background-light-grey {
-  background-color: #f0f0f0; /* Light, clean grey */
+  background-color: #fafafa; /* Light, clean grey */
 }
 
 
@@ -10389,7 +10389,7 @@ a.has-text-danger-dark:hover {
   }
 }
 .footer {
-  background-color: #fafafa;
+  background-color: #f0f0f0;
   padding: 3rem 1.5rem;
 }
 .section {
